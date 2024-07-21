@@ -561,7 +561,33 @@ router.get("/getMeasure", async (req, res) => {
         "is_prospect",
       ];
     } else if (chartSource === "invoices") {
-      data = ["Apoorva", "babyPanda", "riyaa", "panda", "baby"];
+      data = ["invoice_creation_device",
+        "is_discount_taxable",
+        "is_surcharge_taxable",
+        "line_item_total",
+        "total_surcharge",
+        "total_discount",
+        "min_service_charge",
+        "tsf",
+        "additional_discount",
+        "additional_fee",
+        "total_before_tax",
+        "total_tax",
+        "invoice_total",
+        "credit",
+        "payment_collected_amount",
+        "balance",
+        "tax",
+        "is_active",
+        "is_deleted",
+        "ready_for_sync",
+        "bu_id",
+        "additional_fee_amount",
+        "additional_discount_amount",
+        "is_amount_additional_fee",
+        "is_amount_additional_discount",
+        "items_total_discount",
+];
     }
     res.send(data);
   } catch (err) {
